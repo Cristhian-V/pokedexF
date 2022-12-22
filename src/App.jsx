@@ -8,15 +8,10 @@ function App() {
 
   const trainer = useSelector(state => state.trainer)
 
-  console.log(trainer)
-
   const dispatch = useDispatch()
-
-  dispatch(setTrainer('Cristhian'))
 
   return (
     <div className="App">
-      <h1>pokedex</h1>
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
