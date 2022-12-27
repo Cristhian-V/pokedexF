@@ -33,7 +33,7 @@
     margin-bottom: 40px;
 }
 
-.home-input-container {
+.home-from-container {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     width: 500px;
