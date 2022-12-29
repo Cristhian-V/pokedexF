@@ -24,6 +24,7 @@ const PokeCard = ({ pokemon }) => {
   const handleClick = () => {
     navigate(`/pokedex/${pokemonData.id}`)
   }
+
   return (
     <section onClick={handleClick}>
       <div>

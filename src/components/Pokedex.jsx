@@ -1,12 +1,16 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import Pagination from './Pagination'
 import PokeCard from './PokeCard'
 
 const Pokedex = () => {
     const trainer = useSelector(state => state.trainer)
+    const [pokemonPaginationSelector, setPokemonPaginationSelector] = useState()
     const [pokemons, setPokemons] = useState()
-    const [URL, setURL] = useState('https://pokeapi.co/api/v2/pokemon?limit=16&offset=0')
+    const [end, setEnd] = useState()
+    const [pagina, setPagina] = useState(0)
+    const [URL, setURL] = useState('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
 
     const getPokemons = () => {
         if (URL.indexOf('pokemon?limit') !== -1) {
@@ -30,7 +34,24 @@ const Pokedex = () => {
 
     useEffect(() => {
         getPokemons()
+        setPagina(0)
     }, [URL])
+
+    useEffect(() => {
+        if(pokemons){
+            let arrayTempTotal = []
+            for(let x = 0; x < pokemons.length; x = x + 16){
+                let arrayTemp = []
+                let Limit = x + 16
+                for(let i = x; i < Limit; i++){
+                    if(pokemons[i]){arrayTemp.push(pokemons[i])}
+                }
+                arrayTempTotal.push(arrayTemp)
+            } 
+            setPokemonPaginationSelector(arrayTempTotal[pagina])
+            setEnd(arrayTempTotal.length - 1)
+        }
+    },[pokemons, pagina])
 
     const handleChange = (e) => {
         setURL(e.target.value)
@@ -41,13 +62,14 @@ const Pokedex = () => {
         console.log(URL)
     }
 
+
     return (
         <div>
             <header>Aqui entra Header</header>
             <h2>{trainer}</h2>
             <form onSubmit={handleSubmit}>
                 <select id="typeSelect" onChange={handleChange} >
-                    <option value='https://pokeapi.co/api/v2/pokemon?limit=16&offset=0'>All Pokemons</option>
+                    <option value='https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'>All Pokemons</option>
                     <option value="https://pokeapi.co/api/v2/type/1/">normal</option>
                     <option value="https://pokeapi.co/api/v2/type/2/">fighting</option>
                     <option value="https://pokeapi.co/api/v2/type/3/">flying</option>
@@ -71,13 +93,24 @@ const Pokedex = () => {
                 <input type="text" id='namePokemon' />
                 <button>Buscar</button>
             </form>
+            <Pagination 
+                pagina={pagina}
+                setPagina={setPagina}
+                end={end}
+            />
             {
-                pokemons?.map((pokemon) => (
+                pokemonPaginationSelector?.map((pokemon) => (
                     <PokeCard
-                        pokemon={pokemon}
                         key={pokemon.url}
+                        pokemon={pokemon}
                     />
                 ))}
+            
+            <Pagination 
+                pagina={pagina}
+                setPagina={setPagina}
+                end={end}
+            />
         </div>
     )
 }
