@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Pagination from './Pagination'
 import PokeCard from './PokeCard'
+import img_1 from '../assets/img/image_1.png'
 
 const Pokedex = () => {
     const trainer = useSelector(state => state.trainer)
@@ -65,8 +66,17 @@ const Pokedex = () => {
 
     return (
         <div>
-            <header>Aqui entra Header</header>
-            <h2>{trainer}</h2>
+            <header>
+                <div className='header-red'>
+                    <figure className='header-img'><img src={img_1} alt="" /></figure>
+                </div>
+                <div className='header-black'>
+                    <div className='header-circleWhite'>
+                        <div className='header-circleBlack'></div>
+                    </div>
+                </div>
+            </header>
+            <span className='bienvenida'><h2>Bienvenido {trainer}</h2>, aquí podrás encontrar tu pokemón favorito</span>
             <form onSubmit={handleSubmit}>
                 <select id="typeSelect" onChange={handleChange} >
                     <option value='https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'>All Pokemons</option>
