@@ -77,8 +77,12 @@ const Pokedex = () => {
                 </div>
             </header>
             <span className='bienvenida'><h2>Bienvenido {trainer}</h2>, aquí podrás encontrar tu pokemón favorito</span>
-            <form onSubmit={handleSubmit}>
-                <select id="typeSelect" onChange={handleChange} >
+            <form onSubmit={handleSubmit} className='formSharePokemon'>
+                <div>
+                <input className='formSharePokemon-input' type="text" id='namePokemon' />
+                <button className='formSharePokemon-button'>Buscar</button>
+                </div>
+                <select className='formSharePokemon-select' id="typeSelect" onChange={handleChange} >
                     <option value='https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'>All Pokemons</option>
                     <option value="https://pokeapi.co/api/v2/type/1/">normal</option>
                     <option value="https://pokeapi.co/api/v2/type/2/">fighting</option>
@@ -99,15 +103,10 @@ const Pokedex = () => {
                     <option value="https://pokeapi.co/api/v2/type/17/">dark</option>
                     <option value="https://pokeapi.co/api/v2/type/18/">fairy</option>
                 </select>
-
-                <input type="text" id='namePokemon' />
-                <button>Buscar</button>
             </form>
-            <Pagination 
-                pagina={pagina}
-                setPagina={setPagina}
-                end={end}
-            />
+
+            <div className='pokeCard-cotainer-container'>
+            <div className='pokeCard-cotainer'>
             {
                 pokemonPaginationSelector?.map((pokemon) => (
                     <PokeCard
@@ -115,7 +114,9 @@ const Pokedex = () => {
                         pokemon={pokemon}
                     />
                 ))}
-            
+                </div>
+                </div>
+                
             <Pagination 
                 pagina={pagina}
                 setPagina={setPagina}
