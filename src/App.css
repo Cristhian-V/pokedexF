@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2? familia= Roboto:peso@300;400;500;700 & display=swap');
 
 
-:root{
+:root {
     --porcent: 0%;
-    --color:black;
+    --color: black;
 }
 
 .App {
@@ -18,7 +18,7 @@
 
 .home-container {
     width: 100%;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,18 +62,18 @@
     background: #D93F3F;
 }
 
-header{
+header {
     width: 100%;
     height: 170px;
 }
 
-.header-red{
+.header-red {
     position: relative;
     background-color: #DD1A1A;
     height: 100px;
 }
 
-.header-img img{
+.header-img img {
     position: absolute;
     z-index: 9999;
     width: 431px;
@@ -82,35 +82,35 @@ header{
     top: 47px;
 }
 
-.header-black{
+.header-black {
     background-color: black;
     height: 40px;
     position: relative;
 }
 
-.header-circleWhite{
-   position: absolute;
-   background-color: white;
-   width: 117px;
-   height: 117px; 
-   border: solid 10px;
-   border-radius: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   right: 20px;
-   top: -35px;
+.header-circleWhite {
+    position: absolute;
+    background-color: white;
+    width: 117px;
+    height: 117px;
+    border: solid 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    top: -35px;
 }
 
-.header-circleBlack{
-   background-color: darkslategray;
-   width: 50px;
-   height: 50px; 
-   border: solid 10px;
-   border-radius: 50%
+.header-circleBlack {
+    background-color: darkslategray;
+    width: 50px;
+    height: 50px;
+    border: solid 10px;
+    border-radius: 50%
 }
 
-.bienvenida{
+.bienvenida {
     display: flex;
     align-items: flex-end;
     margin-left: 50px;
@@ -118,12 +118,12 @@ header{
     font-size: 21px;
 }
 
-.bienvenida h2{
+.bienvenida h2 {
     font-size: 24px;
-    color:  #FE1936;
+    color: #FE1936;
 }
 
-.formSharePokemon{
+.formSharePokemon {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
@@ -133,18 +133,18 @@ header{
     margin-bottom: 20px;
 }
 
-.formSharePokemon div{
+.formSharePokemon div {
     box-shadow: 5px 5px 20px 0px #00000081;
 }
 
-.formSharePokemon-input{
+.formSharePokemon-input {
     width: 500px;
     height: 100%;
     padding-left: 20px;
     font-size: 24px;
 }
 
-.formSharePokemon-button{
+.formSharePokemon-button {
     width: 200px;
     height: 100%;
     font-size: 24px;
@@ -152,7 +152,7 @@ header{
     background-color: #D93F3F;
 }
 
-.formSharePokemon-select{
+.formSharePokemon-select {
     width: 350px;
     font-size: 24px;
     padding: 20px;
@@ -161,12 +161,12 @@ header{
     border: none;
 }
 
-.pokeCard-cotainer-container{
+.pokeCard-cotainer-container {
     display: flex;
     justify-content: center;
 }
 
-.pokeCard-cotainer{
+.pokeCard-cotainer {
     font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -176,13 +176,13 @@ header{
     margin-bottom: 20px;
 }
 
-.pokecard-img-container{
+.pokecard-img-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.pokeCard{
+.pokeCard {
     width: 260px;
     height: 380px;
     border: solid 10px;
@@ -190,7 +190,7 @@ header{
     background-color: white;
 }
 
-.pokeCard figure{
+.pokeCard figure {
     width: 100%;
     height: 100px;
     text-align: center;
@@ -198,57 +198,58 @@ header{
     background-color: aqua;
 }
 
-.pokeCard-img{
+.pokeCard-img {
     width: 150px;
     height: auto;
 }
 
-.pokeCard-name{
+.pokeCard-name {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 3px;
     color: aqua;
 }
 
-.pokeCard-tipoDes{
+.pokeCard-tipoDes {
     font-size: 18px;
     margin-bottom: 3px;
 }
 
-.pokeCard-tipo{
+.pokeCard-tipo {
     font-size: 15px;
     color: #9F9F9F;
 }
 
-hr{
+hr {
     margin: 7px 10px 20px;
     border: solid 0.5px;
     border-color: #E5E5E5;
 }
 
-.pokeCard-info{
+.pokeCard-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     row-gap: 25px;
 }
 
-.pokeCard-info-title{
+.pokeCard-info-title {
     font-size: 12px;
     color: #9F9F9F;
     margin-bottom: 5px;
 }
 
-.pokeCard-info-stat{
+.pokeCard-info-stat {
     color: aqua;
     font-weight: 700;
 }
 
-.pagination-container-container{
+.pagination-container-container {
     display: flex;
     justify-content: center;
 }
-.pagination-container{
+
+.pagination-container {
     width: 1080px;
     height: 70px;
     display: flex;
@@ -256,24 +257,24 @@ hr{
     gap: 20PX;
 }
 
-.pagination{
+.pagination {
     display: flex;
     gap: 20PX;
 }
 
-.pagination button{
+.pagination button {
     border: none;
     border-radius: 6px;
     color: white;
     font-size: 24px;
 }
 
-.button-StarEnd{
+.button-StarEnd {
     width: 100px;
     background-color: #c94343;
 }
 
-.button-pagination{
+.button-pagination {
     background-color: rgb(61, 55, 55);
     width: 50px;
     display: flex;
@@ -281,20 +282,20 @@ hr{
     align-items: center;
 }
 
-.pagination button:hover{
+.pagination button:hover {
     cursor: pointer;
     background-color: aqua;
-    transform: translate(0px,-5px);
+    transform: translate(0px, -5px);
     transition: 0.5s;
 }
 
-.pokeCard:hover{
+.pokeCard:hover {
     cursor: pointer;
-    transform: translate(0px,-5px);
+    transform: translate(0px, -5px);
     transition: 0.5s;
 }
 
-.cardInfo-container-container{
+.cardInfo-container-container {
     margin-top: 200px;
     width: 100%;
     display: flex;
@@ -303,7 +304,7 @@ hr{
     row-gap: 20px;
 }
 
-.cardInfo-container{
+.cardInfo-container {
     width: 1080px;
     display: flex;
     flex-direction: column;
@@ -312,7 +313,7 @@ hr{
     border-radius: 15px;
 }
 
-.cardInfo-Info{
+.cardInfo-Info {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -320,11 +321,11 @@ hr{
     row-gap: 15px;
 }
 
-hr{
+hr {
     width: 95%;
 }
 
-.cardInfo-imgContainer{
+.cardInfo-imgContainer {
     text-align: center;
     width: 100%;
     height: 170px;
@@ -332,7 +333,7 @@ hr{
     border-radius: 15px;
 }
 
-.cardInfo-img{
+.cardInfo-img {
     width: 350px;
     height: auto;
     position: absolute;
@@ -340,14 +341,14 @@ hr{
     transform: translate(-50%, -48%);
 }
 
-.cardInfo-id{
+.cardInfo-id {
     padding: 7px;
     border-radius: 5px;
     border: solid 3px #9F9F9F;
     margin-bottom: 20px;
 }
 
-.cardInfo-nameContainer{
+.cardInfo-nameContainer {
     width: 100%;
     position: relative;
     display: flex;
@@ -355,7 +356,7 @@ hr{
     justify-content: center;
 }
 
-.carInfo-name{
+.carInfo-name {
     position: absolute;
     background-color: white;
     top: -35px;
@@ -363,31 +364,31 @@ hr{
     font-size: 40px;
 }
 
-.cardInfo-complexion{
+.cardInfo-complexion {
     display: flex;
     width: 200px;
     justify-content: space-between;
 }
 
-.cardInfo-compWeight{
+.cardInfo-compWeight {
     text-align: center;
 }
 
-.cardInfo-compWeight-stat{
+.cardInfo-compWeight-stat {
     font-size: 24px;
     font-weight: 700;
 }
 
-.cardInfo-compHeight{
+.cardInfo-compHeight {
     text-align: center;
 }
 
-.cardInfo-compHeight-stat{
+.cardInfo-compHeight-stat {
     font-size: 24px;
     font-weight: 700;
 }
 
-.cardInfo-container-tipHab{
+.cardInfo-container-tipHab {
     display: flex;
     width: 80%;
     justify-content: space-between;
@@ -395,20 +396,20 @@ hr{
     margin-bottom: 50px;
 }
 
-.cardInfo-tipo-container{
+.cardInfo-tipo-container {
     text-align: center;
 }
 
-.cardInfo-container-Types{
+.cardInfo-container-Types {
     display: flex;
     gap: 10px;
 }
 
-.cardInfo-tipo-title{
+.cardInfo-tipo-title {
     margin-bottom: 20px;
 }
 
-.cardInfo-tipo-description{
+.cardInfo-tipo-description {
     width: 200px;
     height: 50px;
     border-radius: 5px;
@@ -418,20 +419,20 @@ hr{
     color: white;
 }
 
-.cardInfo-habilities-container{
+.cardInfo-habilities-container {
     text-align: center;
 }
 
-.cardInfo-abiliti-title{
+.cardInfo-abiliti-title {
     margin-bottom: 20px;
 }
 
-.cardInfo-container-abilities{
+.cardInfo-container-abilities {
     display: flex;
     gap: 10px;
 }
 
-.cardInfo-abilities-description{
+.cardInfo-abilities-description {
     width: 200px;
     height: 50px;
     border-radius: 5px;
@@ -442,12 +443,12 @@ hr{
     color: #302F2F;
 }
 
-.cardInfo-statContainer{
+.cardInfo-statContainer {
     position: relative;
     width: 100%;
 }
 
-.cardInfo-stat-title{
+.cardInfo-stat-title {
     position: absolute;
     background-color: white;
     font-size: 35px;
@@ -455,25 +456,25 @@ hr{
     top: -30px;
 }
 
-.cardInfo-statContainer-container{
+.cardInfo-statContainer-container {
     margin-top: 30px;
     padding: 30px;
 }
 
-.cardInfo-statContainer-container{
+.cardInfo-statContainer-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.cardInfo-stat-description{
+.cardInfo-stat-description {
     font-size: 20px;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
 }
 
-.porcent-stat{
+.porcent-stat {
     position: relative;
     width: 100%;
     height: 20px;
@@ -483,7 +484,7 @@ hr{
     margin: 5px 0;
 }
 
-.porcent-stat::before{
+.porcent-stat::before {
     content: '';
     position: absolute;
     width: var(--porcent);
@@ -491,18 +492,18 @@ hr{
     background-color: var(--color);
 }
 
-.movements-container-container{
+.movements-container-container {
     width: 1080px;
     background-color: white;
     padding: 20px;
     border-radius: 15px;
 }
 
-.movements-title{
+.movements-title {
     font-size: 30px;
 }
 
-.movements-container{
+.movements-container {
     font-size: 22px;
     width: 100%;
     display: grid;
@@ -512,7 +513,7 @@ hr{
     text-align: center;
 }
 
-.movements-description{
+.movements-description {
     color: white;
     background-color: var(--color);
     border-radius: 50px;
